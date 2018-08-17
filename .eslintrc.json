@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": "airbnb",
+  "rules": {
+    "arrow-parens": "off",
+    "comma-dangle": "off",
+    "max-len": ["error", {
+      "code": 90
+    }],
+    "react/jsx-filename-extension": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/label-has-for": "off",
+    "object-curly-newline": "off"
+  }
+}
