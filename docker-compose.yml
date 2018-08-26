@@ -1,0 +1,11 @@
+version: '3'
+services:
+  server:
+    image: node:latest
+    volumes:
+      - ./:/project
+    ports:
+      - "80:80"
+    environment:
+      - PORT=80
+    command: sh -c "cd project && npm install && npm run postinstall && npm run start"

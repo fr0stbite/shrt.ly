@@ -6,7 +6,7 @@ import UrlController from './controller/UrlController';
 import database from './database/database';
 import asynclyfy from './utility/asynclyfy';
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT;
 const application = express();
 
 (async () => {
