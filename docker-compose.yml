@@ -1,11 +1,16 @@
 version: '3'
 services:
+  database:
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=password
   server:
     image: node:latest
     volumes:
       - ./:/project
     ports:
-      - "80:80"
+      - 80:80
     environment:
+      - DATABASE_URL=postgres://postgres:password@database/postgres
       - PORT=80
     command: sh -c "cd project && npm install && npm run postinstall && npm run start"
